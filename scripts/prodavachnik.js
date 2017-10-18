@@ -114,7 +114,7 @@ function startApp() {
         showHideMenuLinks();
         showHomeView();
     }
-}
+
 
 
 }
