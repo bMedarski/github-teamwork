@@ -164,8 +164,8 @@ function startApp() {
                         $('<td>').text(advert.description),
                         $('<td>').text(advert.publisher),
                         $('<td>').text(advert.datePublished),
-                        $('<td>').text(advert.price)),
-                        $('<td>').append(readMoreLink
+                        $('<td>').text(advert.price),
+                        $('<td>').append(readMoreLink)
 
                     ));
                 }
