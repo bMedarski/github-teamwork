@@ -200,8 +200,7 @@ function startApp() {
             method: "GET",
             url: kinveyUserUrl,
             headers: kinveyAuthHeaders,
-            success: afterPublisherRequest,
-            error: showError
+            success: afterPublisherRequest
         });
 
         function afterPublisherRequest(publisher) {
@@ -218,13 +217,11 @@ function startApp() {
                 url: kinveyAdvertsUrl,
                 headers: kinveyAuthHeaders,
                 data: advertData,
-                success: createAdvertSuccess,
-                error: handleAjaxError
+                success: createAdvertSuccess
             });
 
             function createAdvertSuccess(response) {
                 listAdverts();
-                showInfo('Advertisement created.');
             }
         }
     }
@@ -241,13 +238,11 @@ function startApp() {
             method: "DELETE",
             url: kinveyBookUrl,
             headers: kinveyAuthHeaders,
-            success: deleteBookSuccess,
-            error: handleAjaxError
+            success: deleteBookSuccess
         });
 
         function deleteBookSuccess(response) {
             listAdverts();
-            showInfo('Advert deleted.');
         }
     }
 
@@ -263,8 +258,7 @@ function startApp() {
             method: "GET",
             url: kinveyBookUrl,
             headers: kinveyAuthHeaders,
-            success: loadAdvertForEditSuccess,
-            error: handleAjaxError
+            success: loadAdvertForEditSuccess
         });
 
         function loadAdvertForEditSuccess(advert) {
@@ -297,13 +291,11 @@ function startApp() {
             url: kinveyAdvertUrl,
             headers: kinveyAuthHeaders,
             data: advertData,
-            success: editAdvertSuccess,
-            error: handleAjaxError
+            success: editAdvertSuccess
         });
 
         function editAdvertSuccess(response) {
             listAdverts();
-            showInfo('Advertisement edited.');
         }
     }
 }
