@@ -60,6 +60,7 @@ function startApp() {
             $("#linkListAds").show();
             $("#linkCreateAd").show();
             $("#linkLogout").show();
+			$("#loggedInUser").show();
         }
     }
 
